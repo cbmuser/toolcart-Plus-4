@@ -290,7 +290,7 @@ trampolin:
                  ora #$ff
                  sta $ff0d      
                  ldy #$00
-                 lda $FF06         ; switch blank: 2 Mhz
+                 lda $FF06         
                  ora #$10
                  sta $FF06
 --               ldx #$00         ; wait ..
