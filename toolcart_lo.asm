@@ -157,8 +157,7 @@ down:           inc row
                 sta row  
                 jmp delay 
 ;----move  
-++               
-                clc
+++              clc
                 ldy #$00    
 -               lda (t_lo),y
                 and #$7f
@@ -192,7 +191,6 @@ delay:          ldx #$00
                 cpy #$80
                 bne -                    
                 jmp keys                  
-
 head:
 !scr " UCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCI "                
 !scr " G commodore plus/4 "
@@ -234,8 +232,6 @@ dirbw_cpy:       lda #>dirbrowser
                  sta s_lo  
                  lda #$17
                  sta blocks 
-
-
 copy:            
                  lda $FF06         ; switch blank: 2 Mhz
                  and #$EF
@@ -314,7 +310,7 @@ rom1_dracopy:
                  sta blocks 
                  ldx #$00 
                  ldy #$00  
-;--- copy trampolin code for rom hi
+;--- copy trampoline-code for rom hi
 rom1_tcopy:
 -                lda rom1_trampolin,x
                  sta tapebuf,x
@@ -328,7 +324,7 @@ rom1_tcopy:
                  cpx #$59+18
                  bne -      
                  jmp tapebuf
-;--- switch rom hi and copy game ro ram
+;--- switch rom hi and copy prg to ram
 rom1_trampolin:
                  sei
                  ldx #$08
