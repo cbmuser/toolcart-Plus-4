@@ -5,7 +5,7 @@ Three neat tools for disk-drives and SD2IEC, especially with Jiffy-DOS support.
 
 ### DraCopy
 
-Copy files from SD2IEC and vice versa. Supports copying files from or to D64 or folders.  
+Copy files from SD2IEC and vice versa. Supports copying files from or to D64 and folders.  
 
 ### Directory Browser
 
